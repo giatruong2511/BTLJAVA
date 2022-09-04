@@ -3,7 +3,6 @@
 <%@ taglib prefix="spring" uri="http://www.springframework.org/tags"%>
 
 
-
 <div class="container-fluid page-header py-5 mb-5 wow fadeIn" data-wow-delay="0.1s">
     <div class="container text-center py-5">
         <c:url value="/" var="action" />
@@ -28,7 +27,7 @@
                     </div>
                 </div>
                 <div class="col-2 text-center">
-                    <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Tìm Kiem</button>
+                    <button class="btn btn-primary rounded-pill py-3 px-5" type="submit">Tìm Kiếm</button>
                 </div>
             </div>
         </form>
@@ -40,15 +39,15 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h1 class="display-6 mb-4">Nhà Xe Pho Bien</h1>
+            <h1 class="display-6 mb-4">Nhà Xe Phổ Biến</h1>
         </div>
         <div class="row g-4">
             <c:forEach items="${bushome}" var="bh">
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                <div class="hioba col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                     <a class="service-item d-block rounded text-center h-100 p-4" href="<c:url value="/bushome/${bh.id}" />">
                         <img class="img-fluid rounded mb-4" src="${bh.image}" alt="">
                         <h4 class="mb-0">${bh.name}</h4>
-                        <h6 class="mb-0"><i class="fas fa-map-marker"></i> ${bh.address}</h6>
+                        <h6 class="mb-0" style="color: #777"><i class="fas fa-map-marker"></i> ${bh.address}</h6>
                     </a>
                 </div>
             </c:forEach>
@@ -69,22 +68,24 @@
 <div class="container-xxl py-5">
     <div class="container">
         <div class="text-center mx-auto mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 600px;">
-            <h1 class="display-6 mb-4">Tuyen Duong Pho Bien</h1>
+            <h1 class="display-6 mb-4">Tuyến Đường Phổ Biến</h1>
         </div>
         <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.1s">      
             <c:forEach items="${route}" var="r">
-                <div class="testimonial-item bg-abxz rounded p-4">
-                    <div class="d-flex align-items-center mb-6">
-                        <img class="flex-shrink-0 rounded-circle border p-1" src="<spring:url value="/images/bg.jpg" />" alt="">
+                <a href="<c:url value="/route/${r.id}" />">
+                    <div class="testimonial-item bg-abxz rounded p-4">
+                        <div class="d-flex align-items-center mb-6">
+                            <img class="flex-shrink-0 rounded-circle border p-1" src="<spring:url value="/images/bg.jpg" />" alt="">
 
-                        <div class="ms-6">
-                            <h5 class="mb-1">${r.name}</h5>
-                            <span><i class="fas fa-map-marker"></i> ${r.bushomeId.name} </span>
-                            <span><i class="fas fa-clock"></i> 8h </span>
-                            <span><i class="fas fa-ticket-alt"></i> 300.000d</span>
+                            <div class="ms-6">
+                                <h5 class="mb-1">${r.name}</h5>
+                                <span style="color: #777"><i class="fas fa-map-marker"></i> ${r.bushomeId.name} </span>
+                                <span style="color: #777"><i class="fas fa-clock"></i> 8h </span>
+                                <span style="color: #777"><i class="fas fa-ticket-alt"></i> 300.000d</span>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </a>
             </c:forEach> 
         </div>
     </div>

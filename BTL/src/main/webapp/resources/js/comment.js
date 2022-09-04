@@ -15,8 +15,8 @@ function loadComment(endpoint, bushomeId) {
                 <div class="c-comment-box">
                 <div class="c-comment-box__avatar"><img src="${c.user.avatar}" /></div>
                     <div class="c-comment-box__content">
-                        <div class="c-comment-name">Binh luan boi ${c.user.username}
-                            <div class="time">${moment(c.createdDate).locale("vi").fromNow()}</div>
+                        <div class="c-comment-name"> ${c.user.lastName} ${c.user.firstName}
+                            <div class="time">-  ${moment(c.createdDate).locale("vi").fromNow()}</div>
                         </div>
                         <div class="c-comment-text">${c.content}</div>
                     </div>
@@ -47,7 +47,7 @@ function addComment(endpoint, bushomeId) {
                 <div class="c-comment-box">
                 <div class="c-comment-box__avatar"><img src="${data.user.avatar}" /></div>
                     <div class="c-comment-box__content">
-                        <div class="c-comment-name">Binh luan boi ${data.user.username}
+                        <div class="c-comment-name">Binh luan boi ${data.user.last_name}
                             <div class="time">${moment(data.createdDate).locale("vi").fromNow()}</div>
                         </div>
                         <div class="c-comment-text">${data.content}</div>

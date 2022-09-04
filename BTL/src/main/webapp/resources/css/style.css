@@ -190,7 +190,7 @@
 }
 
 .page-header {
-    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../img/carousel-1.jpg) center center no-repeat;
+    background: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url(../images/bg.jpg) center center no-repeat;
     background-size: cover;
 }
 
@@ -504,7 +504,7 @@
     display: flex;
     width: 95%;
     margin: auto;
-    height: 160px;
+    height: 120px;
 }
 
 .amt img {
@@ -513,9 +513,6 @@
 }
 .xyz{
     padding: 10px;
-    width: 60%;
-    margin-left: 15px;
-    margin-top: 10px;
 }
 
 .amt button{
@@ -546,12 +543,12 @@
     margin-right: 15px;
     display: inline-flex;
     border-radius: 4px;
-    background: #ced4da;
     color: #fff;
 }
 
 .c-comment-box__avatar img {
-    border-radius: 4px;
+    border-radius: 50%;
+    width: 40px;
 }
 
 .c-comment-name {
@@ -568,13 +565,14 @@
     color: #99a2aa;
     font-weight: 300;
     display: inline-block;
-    margin-left: 4px;
+   
 }
 
 .c-comment-text {
     color: #444b52;
     font-weight: 400;
     margin-top: 4px;
+     margin-left: 5px;
 }
 
 .c-user-rate-form textarea {
@@ -589,7 +587,7 @@
 
 .c-user-rate-form .btn {
     position: absolute;
-    right: 210px;
+    right: 125px;
     transform: translateY(20%);
     padding: 10px 11px;
 }
@@ -601,8 +599,6 @@ body{
     border: 1px solid;
     border-radius: 4px;
     display: flex;
-    width: 90%;
-    margin: auto;
     margin-bottom: 20px;
 }
 
@@ -618,23 +614,65 @@ body{
 }
 .xyzz {
     padding: 10px;
-    width: 50%;
     margin-left: 15px;
     margin-top: 10px;
 }
 
 .azzz{
-    display: flex;
     width: 90%;
     margin: auto;
     margin-bottom: 20px;
 }
 .xyzt{
     padding: 10px;
-    width: 50%;
     margin-left: 15px;
     margin-top: 10px;
 }
 .wwe{
     display: flex;
 } 
+
+.wwe button {
+    margin: 0 15px;
+    width: 30px;
+    height: 30px;
+    padding: 3px;
+}
+
+.hihiava{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+.bbz{
+    width: 80%;
+    margin: auto;
+    padding-top: 30px;
+}
+.bxx{
+    width: 90%;
+    margin: auto;
+    padding-top: 30px;
+}
+
+.bbz img{
+    border-radius: 20px;
+}
+
+.hioba img{
+    height: 120px;
+}
+
+.zzaa{
+    position: absolute;
+    right: 365px;
+    transform: translateY(65%);
+
+}
+
+.dat{
+    positon: absolute;
+        transform: translateY(20%);
+
+}

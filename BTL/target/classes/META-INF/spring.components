@@ -11,6 +11,7 @@ com.btl.controllers.BookingController=org.springframework.stereotype.Component
 com.btl.controllers.BusesAdminComtroller=org.springframework.stereotype.Component
 com.btl.controllers.BusesController=org.springframework.stereotype.Component
 com.btl.controllers.CarController=org.springframework.stereotype.Component
+com.btl.controllers.ConfirmController=org.springframework.stereotype.Component
 com.btl.controllers.IndexController=org.springframework.stereotype.Component
 com.btl.controllers.LoginController=org.springframework.stereotype.Component
 com.btl.controllers.RouteAdminController=org.springframework.stereotype.Component

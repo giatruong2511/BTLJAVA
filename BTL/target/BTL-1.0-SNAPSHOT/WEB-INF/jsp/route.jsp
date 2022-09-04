@@ -7,41 +7,43 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <br>
-<h2 class="text-center text-info">${bushome.name}</h2>
-<div class="row g-4">
-    <div class="col-lg-6 col-md-6">    
-
-        <img src="<c:url value="${bushome.image}" />" class="img-fluid"/> 
-        <br/>
-        <br>
-        <div>
-        <h4 >${bushome.name}</h4>
-        <h6>Đia chi: ${bushome.address}</h6>
-        <h6>So dien thoai: ${bushome.phone}</h6>
-        <h6>Email: ${bushome.email}</h6>
+<div class="g-4"> 
+    <div class="row bbz">
+        <div class="col-lg-4 col-md-6">    
+            <img  src="<c:url value="${bushome.image}" />" class="img-fluid"/> 
+        </div>
+        <div class="col-lg-8 col-md-6">
+            <div>
+                <h2>${bushome.name}</h2>
+                <p>Đia chi: ${bushome.address}</p>
+                <p>Số điện thoại: ${bushome.phone}</p>
+                <p>Email: ${bushome.email}</p>
+            </div>
         </div>
     </div>
-
-
-    <div class="col-lg-6 col-md-6">
-        <h4 class="text-center">Danh sach cac tuyen duong</h4>
-        <br>
+    <div class="bxx row">
+        <h4 class="text-center duo">Các tuyến đường nhà xe ${bushome.name} đang phục vụ</h4>
         <c:forEach items="${route}" var="r">
-            <a href="<c:url value="/route/${r.id}" />">
-                <div class="amt" style="margin-bottom: 20px;">
+            <div class="col-6">      
+                <a style="color: #777" href="<c:url value="/route/${r.id}" />">
+                    <div class="amt" style="margin-bottom: 20px;">
 
-                    <img src="<c:url value="/images/bg.jpg" />"/> 
-                    <div class="xyz">    
-                        <h4 class="mb-1">${r.name}</h4>
-                        <p class="mb-0">Điểm Đi: ${r.startingPOS}</p>
-                        <p class="mb-0">Điểm Đến: ${r.endPOS}</p>
+                        <img  src="<c:url value="/images/bg.jpg" />"/> 
+                        <div class="xyz">    
+                            <h4 class="mb-1">${r.name}</h4>
+                            <p class="mb-0">Điểm Đi: <span class="text-info"> ${r.startingPOS}</span></p>
+                            <p class="mb-0">Điểm Đến:<span class="text-danger"> ${r.endPOS}</span></p>
+                        </div>
+
                     </div>
-
+                </a>
                 </div>
-            </a>
+
         </c:forEach>
     </div>
 </div>
+
+
 
 <c:url value="/api/bushome/${bushome.id}/comments" var="endpoint" />
 
@@ -54,7 +56,7 @@
     </c:if>
     <c:if test="${pageContext.request.userPrincipal.name == null}">
         <div class="c-user-rate-form f-comment-0">
-            <h6 class="text-danger">!! Dang nhap de binh luan</h6>
+            <h6 class="text-danger">Vui lòng đăng nhập để bình luận!</h6>
         </div>              
     </c:if>
     <div id="comments"></div>

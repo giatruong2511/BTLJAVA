@@ -3,16 +3,15 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/ClientSide/javascript.js to edit this template
  */
 
-
 var button = document.getElementById("next");
 var bt = document.getElementById("prev");
 let d = document.getElementById("count");
 let d2 = document.getElementById("count2");
 let price = document.getElementById("pr");
 let d3 = document.getElementById("tt");
-
-console.log(d);
-console.log(d3);
+var checkBox2 = document.getElementById("flexRadioDefault2");
+var checkBox = document.getElementById("flexRadioDefault1");
+var dat = document.getElementById("dat");
 x = price.innerHTML;
 count = 1;
 total = x * count;
@@ -40,7 +39,6 @@ bt.onclick = function () {
     d2.innerHTML = count;
 };
 
-
 function load() {
     d.innerHTML = count;
     d2.innerHTML = count;
@@ -49,7 +47,6 @@ function load() {
     if (count == 1)
         prev.disabled = true;
     let f = document.getElementById("tt").value
-    
 }
 
 function addBooking(endpoint, busesId) {
@@ -57,20 +54,20 @@ function addBooking(endpoint, busesId) {
     fetch(endpoint, {
         method: "post",
         body: JSON.stringify({
-            "numberticket": document.getElementById("count").innerHTML,
+            "numberticket": count,
             "busesId": busesId,
-            "totalmoney":document.getElementById("tt").innerHTML,
-            "name":document.getElementById("name").value,
+            "totalmoney": total,
+            "name": document.getElementById("ten").value,
             "phone": document.getElementById("phone").value,
             "email": document.getElementById("email").value
         }),
         headers: {
             'Content-Type': "application/json"
         }
-    }).then(function(res) {
+    }).then(function (res) {
         return res.json();
-    }).then(function(data) {
-  
+    }).then(function (data) {
+
         location.reload();
-    })
+    });
 }

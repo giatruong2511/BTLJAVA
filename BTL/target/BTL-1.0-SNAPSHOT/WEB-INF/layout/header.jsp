@@ -14,15 +14,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav me-auto p-3 p-lg-0">
-            <a href="<spring:url value="/" />" class="nav-item nav-link active">Home</a>
-            <a href="about.html" class="nav-item nav-link">About Us</a>
-            <a href="service.html" class="nav-item nav-link">Services</a>
-            <a href="project.html" class="nav-item nav-link">Projects</a>
-            <a href="contact.html" class="nav-item nav-link">Contact Us</a>
+            <a href="<spring:url value="/" />" class="nav-item nav-link active">Trang chủ</a>
+            <a href="about.html" class="nav-item nav-link">Nhà Xe</a>
+            <a href="service.html" class="nav-item nav-link">Tuyến Đường</a>
+            <a href="project.html" class="nav-item nav-link">Liên Hệ</a>
         </div>
         <c:if test="${pageContext.request.userPrincipal.name == null}">
-            <a href="<c:url value="/signin" />" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block" style="margin-right: 10px;">Ðang Nhap</a>
-            <a href="<c:url value="/signup" />" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Ðang Ky</a>
+            <a href="<c:url value="/signin" />" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block" style="margin-right: 10px;">Đăng Nhập</a>
+            <a href="<c:url value="/signup" />" class="btn btn-sm btn-light rounded-pill py-2 px-4 d-none d-lg-block">Đăng Ký</a>
         </c:if>
         <c:if test="${pageContext.request.userPrincipal.name != null}">
 
@@ -30,7 +29,7 @@
                 <div class="nav-item dropdown">
                     <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
                         <c:if test="${currentUser != null && currentUser.avatar != null}">
-                            <img src="${currentUser.avatar}" class="rounded-circle" width="30" alt="${currentUser.username}" /> <span>Hi ${pageContext.request.userPrincipal.name}!</span>
+                            <img src="${currentUser.avatar}" class="hihiava" alt="${currentUser.username}" /> <span>Hi ${currentUser.lastName} ${currentUser.firstName}!</span>
                         </c:if>
                     </a>
                     <div class="dropdown-menu border-0 rounded-0 rounded-bottom m-0">
